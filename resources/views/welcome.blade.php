@@ -24,9 +24,22 @@
                         <tr>
                             <td>id</td>
                             <td>Nombre</td>
-                            <td>Ruta</td>
                             <td>Acciones</td>
                         </tr>
+                        @if(isset($sql))
+                            @if(count($sql) > 0)
+                                @foreach($sql as $datos)
+                                    <tr>
+                                        <td>{{ $datos->id }}</td>
+                                        <td>{{ $datos->name }}</td>
+                                        <td>
+                                            <a class="btn btn-info" href="{{ $datos->dir }}">Ver</a>
+                                            <a class="btn btn-warning" href="{{ url('downloadpdf/'.$datos->id) }}">Descargar</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
+                        @endif        
                     </table>
                 </div>        
             </div>

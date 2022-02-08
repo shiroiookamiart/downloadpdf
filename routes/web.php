@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\UploadDownloadPdf::class, "index"]);
+Route::get("downloadpdf/{dir}", [App\Http\Controllers\UploadDownloadPdf::class, "downloadpdf"]);
 
 Route::post("uploadpdf", [App\Http\Controllers\UploadDownloadPdf::class, "uploadpdf"]);

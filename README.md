@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# Crud Laravel 8 Factura
+# Upload and Download PDF
 
-ejemplo de 
+ejemplo de subida y bajada de archivos pdf
 
 
 ## Pre Requisitos
@@ -21,7 +21,7 @@ Laravel 8+
 abre un terminal y Copia
 
 ```
-git clone https://github.com/shiroiokamiart/.git
+git clone https://github.com/shiroiokamiart/downloadpdf.git
 ```
 
 una ves descargado ejecuta

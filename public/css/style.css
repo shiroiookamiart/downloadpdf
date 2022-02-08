@@ -1,0 +1,30 @@
+
+#pre{
+    width: 100%;
+    height: 420px;
+}
+.registro1{
+    position: relative;
+    width: 150px;
+    margin-left: -800px;
+}
+.registro2{
+    position: relative;
+    width: 250px;
+    margin-left: 280px;
+    margin-top: -470px;
+}
+
+.table{
+max-width:100%;
+text-align: center;
+
+
+}
+.table2{
+margin-left: 380px;
+}
+.table3{
+    position: relative;
+    width:220px;
+}

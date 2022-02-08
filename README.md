@@ -27,7 +27,7 @@ git clone https://github.com/shiroiokamiart/downloadpdf.git
 una ves descargado ejecuta
 
 ```
-cd laravel8_crud_registro
+cd downloadpdf
 ```
 
 una ves dentro de la carpeta del proyecto ejecuta

@@ -77,3 +77,5 @@ y luego
 ```
 
 # Imagenes
+
+![Alt text](/public/imagenes/example.png)

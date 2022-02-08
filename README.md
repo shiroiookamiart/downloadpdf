@@ -36,16 +36,23 @@ una ves dentro de la carpeta del proyecto ejecuta
 composer update
 ```
 
-cuando haya finalizado crea una base de datos en mysql con el nombre app
-luego ejecuta el siguiente comando dependiendo tu sistema operativo
+luego ejecuta los siguiente comando dependiendo tu sistema operativo
 
 ### Windows
+
+```
+copy database\db.sqlite.example database\db.sqlite
+```
 
 ```
 copy .env.example .env
 ```
 
 ### linux
+
+```
+cp database/db.sqlite.example database/db.sqlite
+```
 
 ```
 cp .env.example .env

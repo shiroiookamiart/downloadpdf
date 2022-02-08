@@ -15,19 +15,22 @@ class UploadDownloadPdf extends Controller
 
     public function uploadpdf(Request $request){
 
-        $file=$request->file("file");         
-        $nombre = "pdf_".time().".".$file->guessExtension();
-        $ruta = "pdf/".$nombre;
-        $sms = "";
-        if($file->guessExtension()=="pdf"){
-            copy($file, $ruta);
-            $save = new Files(array("name"=>$nombre, "dir"=>$ruta));
-            $save->save();
-            $sms = "Archivo Subido Correctamente";
+        $file=$request->file("file");
+        if(!empty($file)){
+            $nombre = "pdf_".time().".".$file->guessExtension();
+            $ruta = "pdf/".$nombre;
+            $sms = "";
+            if($file->guessExtension()=="pdf"){
+                copy($file, $ruta);
+                $save = new Files(array("name"=>$nombre, "dir"=>$ruta));
+                $save->save();
+                $sms = "Archivo Subido Correctamente";
+            }else{
+                $sms = "Formato no valido";
+            }
         }else{
-            $sms = "Formato no valido";
-        }
-
+            $sms = "Debe subir un archivo";
+        }    
         return redirect()->back()->with("success", $sms);
     }
 

@@ -61,6 +61,12 @@ cp .env.example .env
 Una ves copiado el archivo .env ejecuta
 
 ```
+php artisan migrate
+```
+
+para finalizar
+
+```
 php artisan serve
 ```
 

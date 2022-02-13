@@ -20,13 +20,18 @@ class UploadDownloadPdf extends Controller
             $nombre = "pdf_".time().".".$file->guessExtension();
             $ruta = "pdf/".$nombre;
             $sms = "";
-            if($file->guessExtension()=="pdf"){
-                copy($file, $ruta);
-                $save = new Files(array("name"=>$nombre, "dir"=>$ruta));
-                $save->save();
-                $sms = "Archivo Subido Correctamente";
+            $veriLenth = Files::get();
+            if(count($veriLenth) < 10){
+                if($file->guessExtension()=="pdf"){
+                    copy($file, $ruta);
+                    $save = new Files(array("name"=>$nombre, "dir"=>$ruta));
+                    $save->save();
+                    $sms = "Archivo Subido Correctamente";
+                }else{
+                    $sms = "Formato no valido";
+                }
             }else{
-                $sms = "Formato no valido";
+                $sms = "Ha llegado al limite de carga de archivos de esta demo, consulte a al desarrollador";
             }
         }else{
             $sms = "Debe subir un archivo";
